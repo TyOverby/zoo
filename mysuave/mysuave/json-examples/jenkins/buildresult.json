@@ -1,0 +1,435 @@
+[
+    {
+  "_class" : "hudson.model.FreeStyleBuild",
+  "actions" : [
+    {
+      "_class" : "hudson.model.CauseAction",
+      "causes" : [
+        {
+          "_class" : "com.cloudbees.jenkins.GitHubPushCause",
+          "shortDescription" : "Started by GitHub push by CyrusNajmabadi"
+        }
+      ]
+    },
+    {
+
+    },
+    {
+      "_class" : "hudson.model.ParametersAction",
+      "parameters" : [
+        {
+          "_class" : "hudson.model.StringParameterValue",
+          "name" : "GitBranchOrCommit",
+          "value" : "*/master"
+        },
+        {
+          "_class" : "hudson.model.StringParameterValue",
+          "name" : "DOTNET_CLI_TELEMETRY_PROFILE",
+          "value" : "IsInternal_CIServer;dotnet/roslyn"
+        }
+      ]
+    },
+    {
+
+    },
+    {
+      "_class" : "hudson.plugins.git.util.BuildData",
+      "buildsByBranchName" : {
+        "detached" : {
+          "_class" : "hudson.plugins.git.util.Build",
+          "buildNumber" : 405,
+          "buildResult" : null,
+          "marked" : {
+            "SHA1" : "6a3988ea99a5c914c7eabe0fc9f86eda490969ce",
+            "branch" : [
+              {
+                "SHA1" : "6a3988ea99a5c914c7eabe0fc9f86eda490969ce",
+                "name" : "detached"
+              }
+            ]
+          },
+          "revision" : {
+            "SHA1" : "6a3988ea99a5c914c7eabe0fc9f86eda490969ce",
+            "branch" : [
+              {
+                "SHA1" : "6a3988ea99a5c914c7eabe0fc9f86eda490969ce",
+                "name" : "detached"
+              }
+            ]
+          }
+        },
+        "origin/master" : {
+          "_class" : "hudson.plugins.git.util.Build",
+          "buildNumber" : 498,
+          "buildResult" : null,
+          "marked" : {
+            "SHA1" : "36dfa9da07921ecaaa94c665eb95dc8c543cb1db",
+            "branch" : [
+              {
+                "SHA1" : "36dfa9da07921ecaaa94c665eb95dc8c543cb1db",
+                "name" : "origin/master"
+              }
+            ]
+          },
+          "revision" : {
+            "SHA1" : "36dfa9da07921ecaaa94c665eb95dc8c543cb1db",
+            "branch" : [
+              {
+                "SHA1" : "36dfa9da07921ecaaa94c665eb95dc8c543cb1db",
+                "name" : "origin/master"
+              }
+            ]
+          }
+        }
+      },
+      "lastBuiltRevision" : {
+        "SHA1" : "36dfa9da07921ecaaa94c665eb95dc8c543cb1db",
+        "branch" : [
+          {
+            "SHA1" : "36dfa9da07921ecaaa94c665eb95dc8c543cb1db",
+            "name" : "origin/master"
+          }
+        ]
+      },
+      "remoteUrls" : [
+        "https://github.com/dotnet/roslyn.git"
+      ],
+      "scmName" : ""
+    },
+    {
+      "_class" : "hudson.plugins.git.GitTagAction"
+    },
+    {
+
+    },
+    {
+
+    },
+    {
+
+    },
+    {
+
+    }
+  ],
+  "artifacts" : [
+    {
+      "displayPath" : null,
+      "fileName" : "consumptionTempResults.xml",
+      "relativePath" : "ToArchive/consumptionTempResults.xml"
+    },
+    {
+      "displayPath" : null,
+      "fileName" : "Output-PerfMetrics-Iteration-1.etl.zip",
+      "relativePath" : "ToArchive/DataBackup-2016-11-10-13-31/Output-PerfMetrics-Iteration-1.etl.zip"
+    },
+    {
+      "displayPath" : null,
+      "fileName" : "Output-PerfMetrics-Iteration-2.etl.zip",
+      "relativePath" : "ToArchive/DataBackup-2016-11-10-13-31/Output-PerfMetrics-Iteration-2.etl.zip"
+    },
+    {
+      "displayPath" : null,
+      "fileName" : "Output-PerfMetrics-Iteration-3.etl.zip",
+      "relativePath" : "ToArchive/DataBackup-2016-11-10-13-31/Output-PerfMetrics-Iteration-3.etl.zip"
+    },
+    {
+      "displayPath" : null,
+      "fileName" : "Output-Warmup-Iteration-1.etl.zip",
+      "relativePath" : "ToArchive/DataBackup-2016-11-10-13-31/Output-Warmup-Iteration-1.etl.zip"
+    },
+    {
+      "displayPath" : null,
+      "fileName" : "Output-PerfMetrics-Iteration-1.etl.zip",
+      "relativePath" : "ToArchive/DataBackup-2016-11-10-13-35/Output-PerfMetrics-Iteration-1.etl.zip"
+    },
+    {
+      "displayPath" : null,
+      "fileName" : "Output-PerfMetrics-Iteration-2.etl.zip",
+      "relativePath" : "ToArchive/DataBackup-2016-11-10-13-35/Output-PerfMetrics-Iteration-2.etl.zip"
+    },
+    {
+      "displayPath" : null,
+      "fileName" : "Output-PerfMetrics-Iteration-3.etl.zip",
+      "relativePath" : "ToArchive/DataBackup-2016-11-10-13-35/Output-PerfMetrics-Iteration-3.etl.zip"
+    },
+    {
+      "displayPath" : null,
+      "fileName" : "Output-Warmup-Iteration-1.etl.zip",
+      "relativePath" : "ToArchive/DataBackup-2016-11-10-13-35/Output-Warmup-Iteration-1.etl.zip"
+    },
+    {
+      "displayPath" : null,
+      "fileName" : "Output-PerfMetrics-Iteration-1.etl.zip",
+      "relativePath" : "ToArchive/DataBackup-2016-11-10-13-37/Output-PerfMetrics-Iteration-1.etl.zip"
+    },
+    {
+      "displayPath" : null,
+      "fileName" : "Output-PerfMetrics-Iteration-2.etl.zip",
+      "relativePath" : "ToArchive/DataBackup-2016-11-10-13-37/Output-PerfMetrics-Iteration-2.etl.zip"
+    },
+    {
+      "displayPath" : null,
+      "fileName" : "Output-PerfMetrics-Iteration-3.etl.zip",
+      "relativePath" : "ToArchive/DataBackup-2016-11-10-13-37/Output-PerfMetrics-Iteration-3.etl.zip"
+    },
+    {
+      "displayPath" : null,
+      "fileName" : "Output-Warmup-Iteration-1.etl.zip",
+      "relativePath" : "ToArchive/DataBackup-2016-11-10-13-37/Output-Warmup-Iteration-1.etl.zip"
+    },
+    {
+      "displayPath" : null,
+      "fileName" : "Output-PerfMetrics-Iteration-1.etl.zip",
+      "relativePath" : "ToArchive/DataBackup-2016-11-10-13-40/Output-PerfMetrics-Iteration-1.etl.zip"
+    },
+    {
+      "displayPath" : null,
+      "fileName" : "Output-PerfMetrics-Iteration-2.etl.zip",
+      "relativePath" : "ToArchive/DataBackup-2016-11-10-13-40/Output-PerfMetrics-Iteration-2.etl.zip"
+    },
+    {
+      "displayPath" : null,
+      "fileName" : "Output-PerfMetrics-Iteration-3.etl.zip",
+      "relativePath" : "ToArchive/DataBackup-2016-11-10-13-40/Output-PerfMetrics-Iteration-3.etl.zip"
+    },
+    {
+      "displayPath" : null,
+      "fileName" : "Output-Warmup-Iteration-1.etl.zip",
+      "relativePath" : "ToArchive/DataBackup-2016-11-10-13-40/Output-Warmup-Iteration-1.etl.zip"
+    }
+  ],
+  "building" : false,
+  "description" : null,
+  "displayName" : "#498",
+  "duration" : 1107698,
+  "estimatedDuration" : 1186992,
+  "executor" : null,
+  "fullDisplayName" : "dotnet_roslyn » perf » master » perf_run #498",
+  "id" : "498",
+  "keepLog" : false,
+  "number" : 498,
+  "queueId" : 20,
+  "result" : "SUCCESS",
+  "timestamp" : 1478813204276,
+  "url" : "https://ci2.dot.net/job/dotnet_roslyn/job/perf/job/master/job/perf_run/498/",
+  "builtOn" : "ml-perf-002",
+  "changeSet" : {
+    "_class" : "hudson.plugins.git.GitChangeSetList",
+    "items" : [
+      {
+        "_class" : "hudson.plugins.git.GitChangeSet",
+        "affectedPaths" : [
+          "src/VisualStudio/VisualBasic/Impl/Snippets/SnippetExpansionClient.vb",
+          "src/VisualStudio/CSharp/Impl/Snippets/SnippetExpansionClient.cs",
+          "src/Test/Utilities/Shared/MarkedSource/MarkupTestFile.cs",
+          "src/VisualStudio/Core/Test/Snippets/CSharpSnippetExpansionClientTests.vb",
+          "src/VisualStudio/Core/Def/Implementation/Snippets/AbstractSnippetExpansionClient.cs",
+          "src/VisualStudio/Core/Test/Snippets/VisualBasicSnippetExpansionClientTests.vb",
+          "src/VisualStudio/Core/Test/Snippets/SnippetTestState.vb"
+        ],
+        "commitId" : "193595e93b75871d9805dcff146bdb05a6713d4e",
+        "timestamp" : 1478806381000,
+        "author" : {
+          "absoluteUrl" : "https://ci2.dot.net/user/cyrusnajmabadi",
+          "fullName" : "CyrusNajmabadi"
+        },
+        "comment" : "Insert a Using into the right locatoin when a snippet adds an import.\n",
+        "date" : "2016-11-10 11:33:01 -0800",
+        "id" : "193595e93b75871d9805dcff146bdb05a6713d4e",
+        "msg" : "Insert a Using into the right locatoin when a snippet adds an import.",
+        "paths" : [
+          {
+            "editType" : "edit",
+            "file" : "src/Test/Utilities/Shared/MarkedSource/MarkupTestFile.cs"
+          },
+          {
+            "editType" : "edit",
+            "file" : "src/VisualStudio/Core/Test/Snippets/CSharpSnippetExpansionClientTests.vb"
+          },
+          {
+            "editType" : "edit",
+            "file" : "src/VisualStudio/Core/Test/Snippets/SnippetTestState.vb"
+          },
+          {
+            "editType" : "edit",
+            "file" : "src/VisualStudio/Core/Def/Implementation/Snippets/AbstractSnippetExpansionClient.cs"
+          },
+          {
+            "editType" : "edit",
+            "file" : "src/VisualStudio/Core/Test/Snippets/VisualBasicSnippetExpansionClientTests.vb"
+          },
+          {
+            "editType" : "edit",
+            "file" : "src/VisualStudio/VisualBasic/Impl/Snippets/SnippetExpansionClient.vb"
+          },
+          {
+            "editType" : "edit",
+            "file" : "src/VisualStudio/CSharp/Impl/Snippets/SnippetExpansionClient.cs"
+          }
+        ]
+      },
+      {
+        "_class" : "hudson.plugins.git.GitChangeSet",
+        "affectedPaths" : [
+          "src/VisualStudio/Core/Test/Snippets/CSharpSnippetExpansionClientTests.vb"
+        ],
+        "commitId" : "9e690d0521ee9f4fd44944d782db254f5b317dc4",
+        "timestamp" : 1478809138000,
+        "author" : {
+          "absoluteUrl" : "https://ci2.dot.net/user/cyrusnajmabadi",
+          "fullName" : "CyrusNajmabadi"
+        },
+        "comment" : "Fixup tests.\n",
+        "date" : "2016-11-10 12:18:58 -0800",
+        "id" : "9e690d0521ee9f4fd44944d782db254f5b317dc4",
+        "msg" : "Fixup tests.",
+        "paths" : [
+          {
+            "editType" : "edit",
+            "file" : "src/VisualStudio/Core/Test/Snippets/CSharpSnippetExpansionClientTests.vb"
+          }
+        ]
+      },
+      {
+        "_class" : "hudson.plugins.git.GitChangeSet",
+        "affectedPaths" : [
+          "src/VisualStudio/Core/Test/Snippets/CSharpSnippetExpansionClientTests.vb"
+        ],
+        "commitId" : "bdfa3ebcdc1f7dc53394140dc8be41dc12066ba3",
+        "timestamp" : 1478809241000,
+        "author" : {
+          "absoluteUrl" : "https://ci2.dot.net/user/cyrusnajmabadi",
+          "fullName" : "CyrusNajmabadi"
+        },
+        "comment" : "Remove unneeded imports.\n",
+        "date" : "2016-11-10 12:20:41 -0800",
+        "id" : "bdfa3ebcdc1f7dc53394140dc8be41dc12066ba3",
+        "msg" : "Remove unneeded imports.",
+        "paths" : [
+          {
+            "editType" : "edit",
+            "file" : "src/VisualStudio/Core/Test/Snippets/CSharpSnippetExpansionClientTests.vb"
+          }
+        ]
+      },
+      {
+        "_class" : "hudson.plugins.git.GitChangeSet",
+        "affectedPaths" : [
+          "src/VisualStudio/CSharp/Impl/Snippets/SnippetExpansionClient.cs"
+        ],
+        "commitId" : "1e9618864595c0b211bacce27e6f0ae3d45cd0e9",
+        "timestamp" : 1478809436000,
+        "author" : {
+          "absoluteUrl" : "https://ci2.dot.net/user/cyrusnajmabadi",
+          "fullName" : "CyrusNajmabadi"
+        },
+        "comment" : "Don't explicitly add hte formatting annotation.\n",
+        "date" : "2016-11-10 12:23:56 -0800",
+        "id" : "1e9618864595c0b211bacce27e6f0ae3d45cd0e9",
+        "msg" : "Don't explicitly add hte formatting annotation.",
+        "paths" : [
+          {
+            "editType" : "edit",
+            "file" : "src/VisualStudio/CSharp/Impl/Snippets/SnippetExpansionClient.cs"
+          }
+        ]
+      }
+    ],
+    "kind" : "git"
+  },
+  "culprits" : [
+    {
+      "absoluteUrl" : "https://ci2.dot.net/user/cyrusnajmabadi",
+      "fullName" : "CyrusNajmabadi"
+    }
+  ]
+},
+    {
+  "_class" : "hudson.model.FreeStyleBuild",
+  "actions" : [
+    {
+
+    },
+    {
+      "_class" : "hudson.model.ParametersAction",
+      "parameters" : [
+        {
+          "_class" : "hudson.model.StringParameterValue",
+          "name" : "GitBranchOrCommit",
+          "value" : "*/master"
+        },
+        {
+          "_class" : "hudson.model.StringParameterValue",
+          "name" : "DOTNET_CLI_TELEMETRY_PROFILE",
+          "value" : "IsInternal_CIServer;dotnet/roslyn"
+        }
+      ]
+    },
+    {
+      "_class" : "hudson.model.CauseAction",
+      "causes" : [
+        {
+          "_class" : "com.cloudbees.jenkins.GitHubPushCause",
+          "shortDescription" : "Started by GitHub push by heejaechang"
+        }
+      ]
+    },
+    {
+
+    },
+    {
+      "_class" : "hudson.model.CauseAction",
+      "causes" : [
+        {
+          "_class" : "com.chikli.hudson.plugin.naginator.NaginatorCause",
+          "shortDescription" : "Started by Naginator after build #472 failure"
+        }
+      ]
+    },
+    {
+
+    },
+    {
+
+    },
+    {
+      "_class" : "com.sonyericsson.jenkins.plugins.bfa.model.FailureCauseBuildAction"
+    },
+    {
+
+    },
+    {
+
+    }
+  ],
+  "artifacts" : [
+
+  ],
+  "building" : false,
+  "description" : null,
+  "displayName" : "#474",
+  "duration" : 3654571,
+  "estimatedDuration" : 1186992,
+  "executor" : null,
+  "fullDisplayName" : "dotnet_roslyn » perf » master » perf_run #474",
+  "id" : "474",
+  "keepLog" : false,
+  "number" : 474,
+  "queueId" : 8558,
+  "result" : "FAILURE",
+  "timestamp" : 1478648060819,
+  "url" : "https://ci2.dot.net/job/dotnet_roslyn/job/perf/job/master/job/perf_run/474/",
+  "builtOn" : "ml-perf-001",
+  "changeSet" : {
+    "_class" : "hudson.scm.EmptyChangeLogSet",
+    "items" : [
+
+    ],
+    "kind" : null
+  },
+  "culprits" : [
+
+  ]
+}
+]

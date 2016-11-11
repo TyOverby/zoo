@@ -1,0 +1,665 @@
+{
+  "_class" : "hudson.model.FreeStyleProject",
+  "actions" : [
+    {
+      "_class" : "hudson.model.ParametersDefinitionProperty",
+      "parameterDefinitions" : [
+        {
+          "_class" : "hudson.model.StringParameterDefinition",
+          "defaultParameterValue" : {
+            "_class" : "hudson.model.StringParameterValue",
+            "value" : "*/master"
+          },
+          "description" : "Git branch or commit to build.  If a branch, builds the HEAD of that branch.  If a commit, then checks out that specific commit.",
+          "name" : "GitBranchOrCommit",
+          "type" : "StringParameterDefinition"
+        },
+        {
+          "_class" : "hudson.model.StringParameterDefinition",
+          "defaultParameterValue" : {
+            "_class" : "hudson.model.StringParameterValue",
+            "value" : "IsInternal_CIServer;dotnet/roslyn"
+          },
+          "description" : "This is used to differentiate the internal CI usage of CLI in telemetry.  This gets exposed in the environment and picked up by the CLI product.",
+          "name" : "DOTNET_CLI_TELEMETRY_PROFILE",
+          "type" : "StringParameterDefinition"
+        }
+      ]
+    },
+    {
+
+    },
+    {
+
+    },
+    {
+
+    },
+    {
+
+    },
+    {
+
+    },
+    {
+
+    },
+    {
+
+    },
+    {
+
+    },
+    {
+
+    },
+    {
+      "_class" : "com.cloudbees.plugins.credentials.ViewCredentialsAction"
+    }
+  ],
+  "description" : "perf run",
+  "displayName" : "perf_run",
+  "displayNameOrNull" : null,
+  "name" : "perf_run",
+  "url" : "https://ci2.dot.net/job/dotnet_roslyn/job/perf/job/master/job/perf_run/",
+  "buildable" : true,
+  "builds" : [
+    {
+      "_class" : "hudson.model.FreeStyleBuild",
+      "number" : 496,
+      "url" : "https://ci2.dot.net/job/dotnet_roslyn/job/perf/job/master/job/perf_run/496/"
+    },
+    {
+      "_class" : "hudson.model.FreeStyleBuild",
+      "number" : 494,
+      "url" : "https://ci2.dot.net/job/dotnet_roslyn/job/perf/job/master/job/perf_run/494/"
+    },
+    {
+      "_class" : "hudson.model.FreeStyleBuild",
+      "number" : 493,
+      "url" : "https://ci2.dot.net/job/dotnet_roslyn/job/perf/job/master/job/perf_run/493/"
+    },
+    {
+      "_class" : "hudson.model.FreeStyleBuild",
+      "number" : 492,
+      "url" : "https://ci2.dot.net/job/dotnet_roslyn/job/perf/job/master/job/perf_run/492/"
+    },
+    {
+      "_class" : "hudson.model.FreeStyleBuild",
+      "number" : 491,
+      "url" : "https://ci2.dot.net/job/dotnet_roslyn/job/perf/job/master/job/perf_run/491/"
+    },
+    {
+      "_class" : "hudson.model.FreeStyleBuild",
+      "number" : 490,
+      "url" : "https://ci2.dot.net/job/dotnet_roslyn/job/perf/job/master/job/perf_run/490/"
+    },
+    {
+      "_class" : "hudson.model.FreeStyleBuild",
+      "number" : 489,
+      "url" : "https://ci2.dot.net/job/dotnet_roslyn/job/perf/job/master/job/perf_run/489/"
+    },
+    {
+      "_class" : "hudson.model.FreeStyleBuild",
+      "number" : 488,
+      "url" : "https://ci2.dot.net/job/dotnet_roslyn/job/perf/job/master/job/perf_run/488/"
+    },
+    {
+      "_class" : "hudson.model.FreeStyleBuild",
+      "number" : 487,
+      "url" : "https://ci2.dot.net/job/dotnet_roslyn/job/perf/job/master/job/perf_run/487/"
+    },
+    {
+      "_class" : "hudson.model.FreeStyleBuild",
+      "number" : 486,
+      "url" : "https://ci2.dot.net/job/dotnet_roslyn/job/perf/job/master/job/perf_run/486/"
+    },
+    {
+      "_class" : "hudson.model.FreeStyleBuild",
+      "number" : 485,
+      "url" : "https://ci2.dot.net/job/dotnet_roslyn/job/perf/job/master/job/perf_run/485/"
+    },
+    {
+      "_class" : "hudson.model.FreeStyleBuild",
+      "number" : 484,
+      "url" : "https://ci2.dot.net/job/dotnet_roslyn/job/perf/job/master/job/perf_run/484/"
+    },
+    {
+      "_class" : "hudson.model.FreeStyleBuild",
+      "number" : 483,
+      "url" : "https://ci2.dot.net/job/dotnet_roslyn/job/perf/job/master/job/perf_run/483/"
+    },
+    {
+      "_class" : "hudson.model.FreeStyleBuild",
+      "number" : 482,
+      "url" : "https://ci2.dot.net/job/dotnet_roslyn/job/perf/job/master/job/perf_run/482/"
+    },
+    {
+      "_class" : "hudson.model.FreeStyleBuild",
+      "number" : 481,
+      "url" : "https://ci2.dot.net/job/dotnet_roslyn/job/perf/job/master/job/perf_run/481/"
+    },
+    {
+      "_class" : "hudson.model.FreeStyleBuild",
+      "number" : 480,
+      "url" : "https://ci2.dot.net/job/dotnet_roslyn/job/perf/job/master/job/perf_run/480/"
+    },
+    {
+      "_class" : "hudson.model.FreeStyleBuild",
+      "number" : 479,
+      "url" : "https://ci2.dot.net/job/dotnet_roslyn/job/perf/job/master/job/perf_run/479/"
+    },
+    {
+      "_class" : "hudson.model.FreeStyleBuild",
+      "number" : 478,
+      "url" : "https://ci2.dot.net/job/dotnet_roslyn/job/perf/job/master/job/perf_run/478/"
+    },
+    {
+      "_class" : "hudson.model.FreeStyleBuild",
+      "number" : 477,
+      "url" : "https://ci2.dot.net/job/dotnet_roslyn/job/perf/job/master/job/perf_run/477/"
+    },
+    {
+      "_class" : "hudson.model.FreeStyleBuild",
+      "number" : 476,
+      "url" : "https://ci2.dot.net/job/dotnet_roslyn/job/perf/job/master/job/perf_run/476/"
+    },
+    {
+      "_class" : "hudson.model.FreeStyleBuild",
+      "number" : 475,
+      "url" : "https://ci2.dot.net/job/dotnet_roslyn/job/perf/job/master/job/perf_run/475/"
+    },
+    {
+      "_class" : "hudson.model.FreeStyleBuild",
+      "number" : 474,
+      "url" : "https://ci2.dot.net/job/dotnet_roslyn/job/perf/job/master/job/perf_run/474/"
+    },
+    {
+      "_class" : "hudson.model.FreeStyleBuild",
+      "number" : 473,
+      "url" : "https://ci2.dot.net/job/dotnet_roslyn/job/perf/job/master/job/perf_run/473/"
+    },
+    {
+      "_class" : "hudson.model.FreeStyleBuild",
+      "number" : 472,
+      "url" : "https://ci2.dot.net/job/dotnet_roslyn/job/perf/job/master/job/perf_run/472/"
+    },
+    {
+      "_class" : "hudson.model.FreeStyleBuild",
+      "number" : 471,
+      "url" : "https://ci2.dot.net/job/dotnet_roslyn/job/perf/job/master/job/perf_run/471/"
+    },
+    {
+      "_class" : "hudson.model.FreeStyleBuild",
+      "number" : 470,
+      "url" : "https://ci2.dot.net/job/dotnet_roslyn/job/perf/job/master/job/perf_run/470/"
+    },
+    {
+      "_class" : "hudson.model.FreeStyleBuild",
+      "number" : 469,
+      "url" : "https://ci2.dot.net/job/dotnet_roslyn/job/perf/job/master/job/perf_run/469/"
+    },
+    {
+      "_class" : "hudson.model.FreeStyleBuild",
+      "number" : 468,
+      "url" : "https://ci2.dot.net/job/dotnet_roslyn/job/perf/job/master/job/perf_run/468/"
+    },
+    {
+      "_class" : "hudson.model.FreeStyleBuild",
+      "number" : 467,
+      "url" : "https://ci2.dot.net/job/dotnet_roslyn/job/perf/job/master/job/perf_run/467/"
+    },
+    {
+      "_class" : "hudson.model.FreeStyleBuild",
+      "number" : 466,
+      "url" : "https://ci2.dot.net/job/dotnet_roslyn/job/perf/job/master/job/perf_run/466/"
+    },
+    {
+      "_class" : "hudson.model.FreeStyleBuild",
+      "number" : 465,
+      "url" : "https://ci2.dot.net/job/dotnet_roslyn/job/perf/job/master/job/perf_run/465/"
+    },
+    {
+      "_class" : "hudson.model.FreeStyleBuild",
+      "number" : 464,
+      "url" : "https://ci2.dot.net/job/dotnet_roslyn/job/perf/job/master/job/perf_run/464/"
+    },
+    {
+      "_class" : "hudson.model.FreeStyleBuild",
+      "number" : 463,
+      "url" : "https://ci2.dot.net/job/dotnet_roslyn/job/perf/job/master/job/perf_run/463/"
+    },
+    {
+      "_class" : "hudson.model.FreeStyleBuild",
+      "number" : 462,
+      "url" : "https://ci2.dot.net/job/dotnet_roslyn/job/perf/job/master/job/perf_run/462/"
+    },
+    {
+      "_class" : "hudson.model.FreeStyleBuild",
+      "number" : 461,
+      "url" : "https://ci2.dot.net/job/dotnet_roslyn/job/perf/job/master/job/perf_run/461/"
+    },
+    {
+      "_class" : "hudson.model.FreeStyleBuild",
+      "number" : 460,
+      "url" : "https://ci2.dot.net/job/dotnet_roslyn/job/perf/job/master/job/perf_run/460/"
+    },
+    {
+      "_class" : "hudson.model.FreeStyleBuild",
+      "number" : 459,
+      "url" : "https://ci2.dot.net/job/dotnet_roslyn/job/perf/job/master/job/perf_run/459/"
+    },
+    {
+      "_class" : "hudson.model.FreeStyleBuild",
+      "number" : 458,
+      "url" : "https://ci2.dot.net/job/dotnet_roslyn/job/perf/job/master/job/perf_run/458/"
+    },
+    {
+      "_class" : "hudson.model.FreeStyleBuild",
+      "number" : 457,
+      "url" : "https://ci2.dot.net/job/dotnet_roslyn/job/perf/job/master/job/perf_run/457/"
+    },
+    {
+      "_class" : "hudson.model.FreeStyleBuild",
+      "number" : 456,
+      "url" : "https://ci2.dot.net/job/dotnet_roslyn/job/perf/job/master/job/perf_run/456/"
+    },
+    {
+      "_class" : "hudson.model.FreeStyleBuild",
+      "number" : 455,
+      "url" : "https://ci2.dot.net/job/dotnet_roslyn/job/perf/job/master/job/perf_run/455/"
+    },
+    {
+      "_class" : "hudson.model.FreeStyleBuild",
+      "number" : 454,
+      "url" : "https://ci2.dot.net/job/dotnet_roslyn/job/perf/job/master/job/perf_run/454/"
+    },
+    {
+      "_class" : "hudson.model.FreeStyleBuild",
+      "number" : 453,
+      "url" : "https://ci2.dot.net/job/dotnet_roslyn/job/perf/job/master/job/perf_run/453/"
+    },
+    {
+      "_class" : "hudson.model.FreeStyleBuild",
+      "number" : 452,
+      "url" : "https://ci2.dot.net/job/dotnet_roslyn/job/perf/job/master/job/perf_run/452/"
+    },
+    {
+      "_class" : "hudson.model.FreeStyleBuild",
+      "number" : 451,
+      "url" : "https://ci2.dot.net/job/dotnet_roslyn/job/perf/job/master/job/perf_run/451/"
+    },
+    {
+      "_class" : "hudson.model.FreeStyleBuild",
+      "number" : 450,
+      "url" : "https://ci2.dot.net/job/dotnet_roslyn/job/perf/job/master/job/perf_run/450/"
+    },
+    {
+      "_class" : "hudson.model.FreeStyleBuild",
+      "number" : 449,
+      "url" : "https://ci2.dot.net/job/dotnet_roslyn/job/perf/job/master/job/perf_run/449/"
+    },
+    {
+      "_class" : "hudson.model.FreeStyleBuild",
+      "number" : 448,
+      "url" : "https://ci2.dot.net/job/dotnet_roslyn/job/perf/job/master/job/perf_run/448/"
+    },
+    {
+      "_class" : "hudson.model.FreeStyleBuild",
+      "number" : 447,
+      "url" : "https://ci2.dot.net/job/dotnet_roslyn/job/perf/job/master/job/perf_run/447/"
+    },
+    {
+      "_class" : "hudson.model.FreeStyleBuild",
+      "number" : 446,
+      "url" : "https://ci2.dot.net/job/dotnet_roslyn/job/perf/job/master/job/perf_run/446/"
+    },
+    {
+      "_class" : "hudson.model.FreeStyleBuild",
+      "number" : 445,
+      "url" : "https://ci2.dot.net/job/dotnet_roslyn/job/perf/job/master/job/perf_run/445/"
+    },
+    {
+      "_class" : "hudson.model.FreeStyleBuild",
+      "number" : 444,
+      "url" : "https://ci2.dot.net/job/dotnet_roslyn/job/perf/job/master/job/perf_run/444/"
+    },
+    {
+      "_class" : "hudson.model.FreeStyleBuild",
+      "number" : 443,
+      "url" : "https://ci2.dot.net/job/dotnet_roslyn/job/perf/job/master/job/perf_run/443/"
+    },
+    {
+      "_class" : "hudson.model.FreeStyleBuild",
+      "number" : 442,
+      "url" : "https://ci2.dot.net/job/dotnet_roslyn/job/perf/job/master/job/perf_run/442/"
+    },
+    {
+      "_class" : "hudson.model.FreeStyleBuild",
+      "number" : 441,
+      "url" : "https://ci2.dot.net/job/dotnet_roslyn/job/perf/job/master/job/perf_run/441/"
+    },
+    {
+      "_class" : "hudson.model.FreeStyleBuild",
+      "number" : 440,
+      "url" : "https://ci2.dot.net/job/dotnet_roslyn/job/perf/job/master/job/perf_run/440/"
+    },
+    {
+      "_class" : "hudson.model.FreeStyleBuild",
+      "number" : 439,
+      "url" : "https://ci2.dot.net/job/dotnet_roslyn/job/perf/job/master/job/perf_run/439/"
+    },
+    {
+      "_class" : "hudson.model.FreeStyleBuild",
+      "number" : 438,
+      "url" : "https://ci2.dot.net/job/dotnet_roslyn/job/perf/job/master/job/perf_run/438/"
+    },
+    {
+      "_class" : "hudson.model.FreeStyleBuild",
+      "number" : 437,
+      "url" : "https://ci2.dot.net/job/dotnet_roslyn/job/perf/job/master/job/perf_run/437/"
+    },
+    {
+      "_class" : "hudson.model.FreeStyleBuild",
+      "number" : 436,
+      "url" : "https://ci2.dot.net/job/dotnet_roslyn/job/perf/job/master/job/perf_run/436/"
+    },
+    {
+      "_class" : "hudson.model.FreeStyleBuild",
+      "number" : 435,
+      "url" : "https://ci2.dot.net/job/dotnet_roslyn/job/perf/job/master/job/perf_run/435/"
+    },
+    {
+      "_class" : "hudson.model.FreeStyleBuild",
+      "number" : 434,
+      "url" : "https://ci2.dot.net/job/dotnet_roslyn/job/perf/job/master/job/perf_run/434/"
+    },
+    {
+      "_class" : "hudson.model.FreeStyleBuild",
+      "number" : 433,
+      "url" : "https://ci2.dot.net/job/dotnet_roslyn/job/perf/job/master/job/perf_run/433/"
+    },
+    {
+      "_class" : "hudson.model.FreeStyleBuild",
+      "number" : 432,
+      "url" : "https://ci2.dot.net/job/dotnet_roslyn/job/perf/job/master/job/perf_run/432/"
+    },
+    {
+      "_class" : "hudson.model.FreeStyleBuild",
+      "number" : 431,
+      "url" : "https://ci2.dot.net/job/dotnet_roslyn/job/perf/job/master/job/perf_run/431/"
+    },
+    {
+      "_class" : "hudson.model.FreeStyleBuild",
+      "number" : 430,
+      "url" : "https://ci2.dot.net/job/dotnet_roslyn/job/perf/job/master/job/perf_run/430/"
+    },
+    {
+      "_class" : "hudson.model.FreeStyleBuild",
+      "number" : 429,
+      "url" : "https://ci2.dot.net/job/dotnet_roslyn/job/perf/job/master/job/perf_run/429/"
+    },
+    {
+      "_class" : "hudson.model.FreeStyleBuild",
+      "number" : 428,
+      "url" : "https://ci2.dot.net/job/dotnet_roslyn/job/perf/job/master/job/perf_run/428/"
+    },
+    {
+      "_class" : "hudson.model.FreeStyleBuild",
+      "number" : 427,
+      "url" : "https://ci2.dot.net/job/dotnet_roslyn/job/perf/job/master/job/perf_run/427/"
+    },
+    {
+      "_class" : "hudson.model.FreeStyleBuild",
+      "number" : 426,
+      "url" : "https://ci2.dot.net/job/dotnet_roslyn/job/perf/job/master/job/perf_run/426/"
+    },
+    {
+      "_class" : "hudson.model.FreeStyleBuild",
+      "number" : 425,
+      "url" : "https://ci2.dot.net/job/dotnet_roslyn/job/perf/job/master/job/perf_run/425/"
+    },
+    {
+      "_class" : "hudson.model.FreeStyleBuild",
+      "number" : 424,
+      "url" : "https://ci2.dot.net/job/dotnet_roslyn/job/perf/job/master/job/perf_run/424/"
+    },
+    {
+      "_class" : "hudson.model.FreeStyleBuild",
+      "number" : 423,
+      "url" : "https://ci2.dot.net/job/dotnet_roslyn/job/perf/job/master/job/perf_run/423/"
+    },
+    {
+      "_class" : "hudson.model.FreeStyleBuild",
+      "number" : 422,
+      "url" : "https://ci2.dot.net/job/dotnet_roslyn/job/perf/job/master/job/perf_run/422/"
+    },
+    {
+      "_class" : "hudson.model.FreeStyleBuild",
+      "number" : 421,
+      "url" : "https://ci2.dot.net/job/dotnet_roslyn/job/perf/job/master/job/perf_run/421/"
+    },
+    {
+      "_class" : "hudson.model.FreeStyleBuild",
+      "number" : 420,
+      "url" : "https://ci2.dot.net/job/dotnet_roslyn/job/perf/job/master/job/perf_run/420/"
+    },
+    {
+      "_class" : "hudson.model.FreeStyleBuild",
+      "number" : 419,
+      "url" : "https://ci2.dot.net/job/dotnet_roslyn/job/perf/job/master/job/perf_run/419/"
+    },
+    {
+      "_class" : "hudson.model.FreeStyleBuild",
+      "number" : 418,
+      "url" : "https://ci2.dot.net/job/dotnet_roslyn/job/perf/job/master/job/perf_run/418/"
+    },
+    {
+      "_class" : "hudson.model.FreeStyleBuild",
+      "number" : 417,
+      "url" : "https://ci2.dot.net/job/dotnet_roslyn/job/perf/job/master/job/perf_run/417/"
+    },
+    {
+      "_class" : "hudson.model.FreeStyleBuild",
+      "number" : 416,
+      "url" : "https://ci2.dot.net/job/dotnet_roslyn/job/perf/job/master/job/perf_run/416/"
+    },
+    {
+      "_class" : "hudson.model.FreeStyleBuild",
+      "number" : 415,
+      "url" : "https://ci2.dot.net/job/dotnet_roslyn/job/perf/job/master/job/perf_run/415/"
+    },
+    {
+      "_class" : "hudson.model.FreeStyleBuild",
+      "number" : 414,
+      "url" : "https://ci2.dot.net/job/dotnet_roslyn/job/perf/job/master/job/perf_run/414/"
+    },
+    {
+      "_class" : "hudson.model.FreeStyleBuild",
+      "number" : 413,
+      "url" : "https://ci2.dot.net/job/dotnet_roslyn/job/perf/job/master/job/perf_run/413/"
+    },
+    {
+      "_class" : "hudson.model.FreeStyleBuild",
+      "number" : 412,
+      "url" : "https://ci2.dot.net/job/dotnet_roslyn/job/perf/job/master/job/perf_run/412/"
+    },
+    {
+      "_class" : "hudson.model.FreeStyleBuild",
+      "number" : 411,
+      "url" : "https://ci2.dot.net/job/dotnet_roslyn/job/perf/job/master/job/perf_run/411/"
+    },
+    {
+      "_class" : "hudson.model.FreeStyleBuild",
+      "number" : 410,
+      "url" : "https://ci2.dot.net/job/dotnet_roslyn/job/perf/job/master/job/perf_run/410/"
+    },
+    {
+      "_class" : "hudson.model.FreeStyleBuild",
+      "number" : 409,
+      "url" : "https://ci2.dot.net/job/dotnet_roslyn/job/perf/job/master/job/perf_run/409/"
+    },
+    {
+      "_class" : "hudson.model.FreeStyleBuild",
+      "number" : 408,
+      "url" : "https://ci2.dot.net/job/dotnet_roslyn/job/perf/job/master/job/perf_run/408/"
+    },
+    {
+      "_class" : "hudson.model.FreeStyleBuild",
+      "number" : 407,
+      "url" : "https://ci2.dot.net/job/dotnet_roslyn/job/perf/job/master/job/perf_run/407/"
+    },
+    {
+      "_class" : "hudson.model.FreeStyleBuild",
+      "number" : 406,
+      "url" : "https://ci2.dot.net/job/dotnet_roslyn/job/perf/job/master/job/perf_run/406/"
+    },
+    {
+      "_class" : "hudson.model.FreeStyleBuild",
+      "number" : 405,
+      "url" : "https://ci2.dot.net/job/dotnet_roslyn/job/perf/job/master/job/perf_run/405/"
+    },
+    {
+      "_class" : "hudson.model.FreeStyleBuild",
+      "number" : 404,
+      "url" : "https://ci2.dot.net/job/dotnet_roslyn/job/perf/job/master/job/perf_run/404/"
+    },
+    {
+      "_class" : "hudson.model.FreeStyleBuild",
+      "number" : 403,
+      "url" : "https://ci2.dot.net/job/dotnet_roslyn/job/perf/job/master/job/perf_run/403/"
+    },
+    {
+      "_class" : "hudson.model.FreeStyleBuild",
+      "number" : 402,
+      "url" : "https://ci2.dot.net/job/dotnet_roslyn/job/perf/job/master/job/perf_run/402/"
+    },
+    {
+      "_class" : "hudson.model.FreeStyleBuild",
+      "number" : 401,
+      "url" : "https://ci2.dot.net/job/dotnet_roslyn/job/perf/job/master/job/perf_run/401/"
+    },
+    {
+      "_class" : "hudson.model.FreeStyleBuild",
+      "number" : 400,
+      "url" : "https://ci2.dot.net/job/dotnet_roslyn/job/perf/job/master/job/perf_run/400/"
+    },
+    {
+      "_class" : "hudson.model.FreeStyleBuild",
+      "number" : 399,
+      "url" : "https://ci2.dot.net/job/dotnet_roslyn/job/perf/job/master/job/perf_run/399/"
+    },
+    {
+      "_class" : "hudson.model.FreeStyleBuild",
+      "number" : 398,
+      "url" : "https://ci2.dot.net/job/dotnet_roslyn/job/perf/job/master/job/perf_run/398/"
+    },
+    {
+      "_class" : "hudson.model.FreeStyleBuild",
+      "number" : 397,
+      "url" : "https://ci2.dot.net/job/dotnet_roslyn/job/perf/job/master/job/perf_run/397/"
+    },
+    {
+      "_class" : "hudson.model.FreeStyleBuild",
+      "number" : 396,
+      "url" : "https://ci2.dot.net/job/dotnet_roslyn/job/perf/job/master/job/perf_run/396/"
+    }
+  ],
+  "color" : "blue_anime",
+  "firstBuild" : {
+    "_class" : "hudson.model.FreeStyleBuild",
+    "number" : 395,
+    "url" : "https://ci2.dot.net/job/dotnet_roslyn/job/perf/job/master/job/perf_run/395/"
+  },
+  "healthReport" : [
+    {
+      "description" : "Build stability: No recent builds failed.",
+      "iconClassName" : "icon-health-80plus",
+      "iconUrl" : "health-80plus.png",
+      "score" : 100
+    }
+  ],
+  "inQueue" : false,
+  "keepDependencies" : false,
+  "lastBuild" : {
+    "_class" : "hudson.model.FreeStyleBuild",
+    "number" : 496,
+    "url" : "https://ci2.dot.net/job/dotnet_roslyn/job/perf/job/master/job/perf_run/496/"
+  },
+  "lastCompletedBuild" : {
+    "_class" : "hudson.model.FreeStyleBuild",
+    "number" : 494,
+    "url" : "https://ci2.dot.net/job/dotnet_roslyn/job/perf/job/master/job/perf_run/494/"
+  },
+  "lastFailedBuild" : {
+    "_class" : "hudson.model.FreeStyleBuild",
+    "number" : 474,
+    "url" : "https://ci2.dot.net/job/dotnet_roslyn/job/perf/job/master/job/perf_run/474/"
+  },
+  "lastStableBuild" : {
+    "_class" : "hudson.model.FreeStyleBuild",
+    "number" : 494,
+    "url" : "https://ci2.dot.net/job/dotnet_roslyn/job/perf/job/master/job/perf_run/494/"
+  },
+  "lastSuccessfulBuild" : {
+    "_class" : "hudson.model.FreeStyleBuild",
+    "number" : 494,
+    "url" : "https://ci2.dot.net/job/dotnet_roslyn/job/perf/job/master/job/perf_run/494/"
+  },
+  "lastUnstableBuild" : null,
+  "lastUnsuccessfulBuild" : {
+    "_class" : "hudson.model.FreeStyleBuild",
+    "number" : 474,
+    "url" : "https://ci2.dot.net/job/dotnet_roslyn/job/perf/job/master/job/perf_run/474/"
+  },
+  "nextBuildNumber" : 497,
+  "property" : [
+    {
+      "_class" : "hudson.model.ParametersDefinitionProperty",
+      "parameterDefinitions" : [
+        {
+          "_class" : "hudson.model.StringParameterDefinition",
+          "defaultParameterValue" : {
+            "_class" : "hudson.model.StringParameterValue",
+            "name" : "GitBranchOrCommit",
+            "value" : "*/master"
+          },
+          "description" : "Git branch or commit to build.  If a branch, builds the HEAD of that branch.  If a commit, then checks out that specific commit.",
+          "name" : "GitBranchOrCommit",
+          "type" : "StringParameterDefinition"
+        },
+        {
+          "_class" : "hudson.model.StringParameterDefinition",
+          "defaultParameterValue" : {
+            "_class" : "hudson.model.StringParameterValue",
+            "name" : "DOTNET_CLI_TELEMETRY_PROFILE",
+            "value" : "IsInternal_CIServer;dotnet/roslyn"
+          },
+          "description" : "This is used to differentiate the internal CI usage of CLI in telemetry.  This gets exposed in the environment and picked up by the CLI product.",
+          "name" : "DOTNET_CLI_TELEMETRY_PROFILE",
+          "type" : "StringParameterDefinition"
+        }
+      ]
+    },
+    {
+      "_class" : "com.coravy.hudson.plugins.github.GithubProjectProperty"
+    },
+    {
+      "_class" : "com.tikal.hudson.plugins.notification.HudsonNotificationProperty"
+    },
+    {
+      "_class" : "com.sonyericsson.jenkins.plugins.bfa.model.ScannerJobProperty"
+    }
+  ],
+  "queueItem" : null,
+  "concurrentBuild" : true,
+  "downstreamProjects" : [
+
+  ],
+  "scm" : {
+    "_class" : "hudson.plugins.git.GitSCM"
+  },
+  "upstreamProjects" : [
+
+  ]
+}
