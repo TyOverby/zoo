@@ -45,6 +45,7 @@
     <Reference Include="System.Numerics" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="util.fs" />
     <Compile Include="mysuave.fs" />
   </ItemGroup>
   <PropertyGroup>
