@@ -28,7 +28,7 @@ module.exports = {
     },
     plugins: [
         new CopyWebpackPlugin([
-            { from: "index.html" },
+            { from: "./src/index.html" },
             { from: "./node_modules/react/dist/react.js", to: "deps" },
             { from: "./node_modules/react-dom/dist/react-dom.js", to: "deps" }
         ])

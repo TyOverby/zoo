@@ -10,5 +10,6 @@
   "license": "MIT",
   "devDependencies": {
     "copy-webpack-plugin": "^4.0.1"
-  }
+  },
+  "dependencies": { }
 }

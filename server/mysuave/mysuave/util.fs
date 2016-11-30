@@ -1,5 +1,4 @@
 module Util
-
 let dechoice c =
     match c with
     | Choice1Of2 t -> Some t
@@ -33,3 +32,7 @@ type MutexHolder<'a>(value: 'a) =
             f value
         finally
             ignore (mutex.ExitReadLock())
+
+let defaultIfNone d = function
+    | Some x -> x
+    | None -> d

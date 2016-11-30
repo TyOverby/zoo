@@ -1,4 +1,5 @@
 open Suave
+open Option
 open Suave.Successful
 open Suave.Web
 open Suave.Filters
@@ -23,7 +24,7 @@ type RunResult = {
     Status: RunStatus;
 } with
     override this.ToString() =
-        sprintf """{id: %d, status: "%s"}""" this.Id (this.Status.ToString())
+        sprintf """{"id": %d, "status": "%s"}""" this.Id (this.Status.ToString())
 
 let cache: Util.MutexHolder<Map<(string * string[]), (Diagnostics.Stopwatch * Map<int, RunResult>)>> = Util.MutexHolder Map.empty
 
@@ -61,7 +62,9 @@ let updateCache domain jobNames n: Async<RunResult[]> =
 
 let getJenkinsWeb domain jobNames: WebPart =
     let intoJson results =
-        "[" + String.Join(",", results |> Seq.map (fun x -> x.ToString())) + "]"
+        let pathJson ="[" + String.Join(",", Seq.map (fun x -> "\"" + x + "\"") jobNames) + "]"
+        let buildsJson = "[" + String.Join(",", results |> Seq.map (fun x -> x.ToString())) + "]"
+        sprintf """{"path": %s, "builds": %s}""" pathJson buildsJson
 
     fun (x: HttpContext) ->  async {
         // Using the query string, try to parse out a "count" query that will
@@ -91,10 +94,17 @@ let cachePrinter =
 
 let app =
     let splitPath (path: string) = path.Split('/')
+
+    let staticFiles =
+        Seq.tryItem 1 (Environment.GetCommandLineArgs())
+        |> Util.defaultIfNone Environment.CurrentDirectory
+        |> System.IO.Path.GetFullPath
+
     choose [
         GET >=> choose [
             pathScan "/api/runs/%s/%s" (fun (domain, jobNames) -> getJenkinsWeb domain (splitPath jobNames))
             path "/api/cache" >=> setMimeType "text/plain" >=> cachePrinter
+            Files.browse staticFiles
         ]
     ]
 
