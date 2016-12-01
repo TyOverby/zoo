@@ -9,8 +9,11 @@
     },
     "files": [
         "./src/components/hello.tsx",
-        "./src/components/job_view.tsx",
+        "./src/components/queue.tsx",
         "./src/foreign.ts",
-        "./src/index.tsx"
+        "./src/index.tsx",
+        "./src/state.ts",
+        "./src/render.tsx",
+        "./src/util.ts"
     ]
 }

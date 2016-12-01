@@ -64,7 +64,7 @@ let getJenkinsWeb domain jobNames: WebPart =
     let intoJson results =
         let pathJson ="[" + String.Join(",", Seq.map (fun x -> "\"" + x + "\"") jobNames) + "]"
         let buildsJson = "[" + String.Join(",", results |> Seq.map (fun x -> x.ToString())) + "]"
-        sprintf """{"path": %s, "builds": %s}""" pathJson buildsJson
+        sprintf """{"path": %s, "runs": %s}""" pathJson buildsJson
 
     fun (x: HttpContext) ->  async {
         // Using the query string, try to parse out a "count" query that will
