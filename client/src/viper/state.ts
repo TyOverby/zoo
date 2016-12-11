@@ -34,7 +34,7 @@ export interface Queue {
     runs: Run[],
 }
 
-export interface Run{
+export interface Run {
     id: number,
     status: JobStatus,
 }
