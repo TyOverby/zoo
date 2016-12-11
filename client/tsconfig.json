@@ -8,12 +8,11 @@
         "jsx": "react"
     },
     "files": [
-        "./src/components/hello.tsx",
         "./src/components/queue.tsx",
-        "./src/foreign.ts",
-        "./src/index.tsx",
-        "./src/state.ts",
-        "./src/render.tsx",
+        "./src/viper/foreign.ts",
+        "./src/viper/index.tsx",
+        "./src/viper/state.ts",
+        "./src/viper/render.tsx",
         "./src/util.ts"
     ]
 }

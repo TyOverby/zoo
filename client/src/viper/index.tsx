@@ -1,9 +1,8 @@
 import * as React from "react";
 import * as ReactDOM from "react-dom";
 
-import { Hello } from "./components/hello";
-import { QueueView } from "./components/queue";
-import { httpGet } from "./util";
+import { QueueView } from "../components/queue";
+import { httpGet } from "../util";
 import render from "./render";
 import { AppState, QueueState, QueueStateTag } from "./state";
 
@@ -59,7 +58,7 @@ appState.scheduleDraw();
 
 for (let config of all_configs) {
     let path = [config.server, ... config.path].join("/");
-    let url = `http://localhost:8083/api/runs/${path}`;
+    let url = `http://localhost:8083/api/viper/runs/${path}`;
 
     httpGet(url,
         function(error: string) {

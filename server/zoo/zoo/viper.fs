@@ -1,3 +1,5 @@
+module Viper
+
 open Suave
 open Option
 open Suave.Successful
@@ -92,6 +94,7 @@ let cachePrinter =
         OK out x
 
 
+(*
 let app =
     let splitPath (path: string) = path.Split('/')
 
@@ -109,3 +112,4 @@ let app =
     ]
 
 startWebServer defaultConfig app
+*)

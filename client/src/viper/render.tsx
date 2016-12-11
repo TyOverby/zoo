@@ -1,6 +1,6 @@
 import {AppState, QueueStateTag} from "./state";
 import * as React from "react";
-import {QueueView} from "./components/queue";
+import {QueueView} from "../components/queue";
 
 export default function render(state: AppState): React.ReactElement<any> {
     let all = state.queues.map(q => {
