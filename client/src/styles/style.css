@@ -9,3 +9,7 @@
 .error {
     background-color: red;
 }
+
+.queue > h1 {
+    user-select: none;
+}

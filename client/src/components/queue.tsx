@@ -41,7 +41,7 @@ export class QueueView extends React.Component<Queue, {collapsed: boolean}> {
         let toggleVisibility = () => this.setState({collapsed: !this.state.collapsed});
 
         return (
-        <div className={queueHealth(this.props.runs)}>
+        <div className={"queue " + queueHealth(this.props.runs)}>
             <h1 onClick={toggleVisibility}> {name} </h1>
             <ul> {children} </ul>
         </div>);
