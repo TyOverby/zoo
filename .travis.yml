@@ -3,7 +3,7 @@ node_js:
     - "6"
 sudo: required
 install:
-    - sudo apt-get install mono
+    - sudo apt-get install mono-complete
     - (cd client && npm install)
 script:
     - ./deploy.sh
