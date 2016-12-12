@@ -1,4 +1,4 @@
-import {JobStatus} from "./foreign";
+import {RunStatus} from "./foreign";
 
 export interface AppState {
     queues: QueueState[],
@@ -36,5 +36,5 @@ export interface Queue {
 
 export interface Run {
     id: number,
-    status: JobStatus,
+    status: RunStatus,
 }

@@ -10,8 +10,8 @@ open Suave.Writers
 open System
 open FSharp.Data
 
-type RunsContext = JsonProvider<"./json-examples/jenkins/runslist.json">
-type BuildResultContext = JsonProvider<"./json-examples/jenkins/buildresult.json", SampleIsList=true>
+type RunsContext = JsonProvider<"./viper/json-examples/jenkins/queue.json">
+type BuildResultContext = JsonProvider<"./viper/json-examples/jenkins/run.json", SampleIsList=true>
 
 type RunStatus = Queued | Running | Failed | Succeeded with
     override this.ToString() =
@@ -47,19 +47,19 @@ let updateCache domain jobNames n: Async<RunResult[]> =
         let jobNesting = String.Join("/", jobNames |> Seq.collect (fun x -> ["job"; x]))
         let! data = RunsContext.AsyncLoad(sprintf "http://%s/%s/api/json?pretty=true" domain jobNesting)
         let numbers = data.Builds |> Seq.map (fun b -> b.Number) |> Seq.take n
-        let! builds = numbers |> Seq.map (fetchBuildResult jobNesting) |> Async.Parallel
-        let buildsMap = builds |> Array.map (fun b -> (b.Id , b)) |> Map.ofArray
+        let! queue = numbers |> Seq.map (fetchBuildResult jobNesting) |> Async.Parallel
+        let queueMap = queue |> Array.map (fun b -> (b.Id , b)) |> Map.ofArray
 
         ignore(cache.MapUpdate (fun cache ->
             let key = (domain, Array.ofSeq jobNames)
             let cacheForThisJob =
                 match Map.tryFind key cache with
-                | Some (_, c) -> Util.mergeMaps c buildsMap
-                | None -> buildsMap
+                | Some (_, c) -> Util.mergeMaps c queueMap
+                | None -> queueMap
             let stopwatch = System.Diagnostics.Stopwatch.StartNew();
             Map.add key (stopwatch, cacheForThisJob) cache))
 
-        return builds
+        return queue
     }
 
 let getJenkinsWeb domain jobNames: WebPart =
@@ -92,24 +92,3 @@ let cachePrinter =
             for (KeyValue(_, result)) in v do
                 out <- out + sprintf "\t%s\n" (result.ToString())
         OK out x
-
-
-(*
-let app =
-    let splitPath (path: string) = path.Split('/')
-
-    let staticFiles =
-        Seq.tryItem 1 (Environment.GetCommandLineArgs())
-        |> Util.defaultIfNone Environment.CurrentDirectory
-        |> System.IO.Path.GetFullPath
-
-    choose [
-        GET >=> choose [
-            pathScan "/api/runs/%s/%s" (fun (domain, jobNames) -> getJenkinsWeb domain (splitPath jobNames))
-            path "/api/cache" >=> setMimeType "text/plain" >=> cachePrinter
-            Files.browse staticFiles
-        ]
-    ]
-
-startWebServer defaultConfig app
-*)

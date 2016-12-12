@@ -46,7 +46,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="util.fs" />
-    <Compile Include="viper.fs" />
+    <Compile Include="viper/viper.fs" />
     <Compile Include="zoo.fs" />
   </ItemGroup>
   <PropertyGroup>

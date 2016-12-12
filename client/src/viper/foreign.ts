@@ -1,11 +1,11 @@
-export type JobStatus = "succeeded" | "failed" | "running" | "queued";
+export type RunStatus = "succeeded" | "failed" | "running" | "queued";
 
-export interface JobJson {
+export interface QueueJson {
     path: string[],
-    builds: BuildJson[],
+    runs: RunJson[],
 }
 
-export interface BuildJson {
+export interface RunJson {
     id: number,
-    status: JobStatus,
+    status: RunStatus,
 }
