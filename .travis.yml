@@ -1,8 +1,7 @@
-language: node_js
-node_js:
-    - "6"
+language: csharp
 sudo: required
 install:
+    - nvm install 6
     - sudo apt-get install mono-complete
     - (cd client && npm install)
 script:
