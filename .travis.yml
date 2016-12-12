@@ -1,0 +1,5 @@
+language: node_js
+script:
+    - cd client
+    - npm install
+    - ./node_modules/.bin/webpack

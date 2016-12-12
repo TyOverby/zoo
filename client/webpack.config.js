@@ -1,4 +1,5 @@
 var CopyWebpackPlugin = require('copy-webpack-plugin');
+const { CheckerPlugin } = require('awesome-typescript-loader')
 
 module.exports = {
     entry: "./src/viper/index.tsx",
@@ -18,7 +19,7 @@ module.exports = {
     module: {
         loaders: [
             // All files with a '.ts' or '.tsx' extension will be handled by 'ts-loader'.
-            { test: /\.tsx?$/, loader: "ts-loader" }
+            { test: /\.tsx?$/, loader: "awesome-typescript-loader" }
         ],
 
         preLoaders: [
@@ -32,7 +33,8 @@ module.exports = {
             { from: "./src/styles/" },
             { from: "./node_modules/react/dist/react.js", to: "deps" },
             { from: "./node_modules/react-dom/dist/react-dom.js", to: "deps" }
-        ])
+        ]),
+        new CheckerPlugin()
     ],
 
     // When importing a module whose path matches one of the following, just
