@@ -1,8 +1,8 @@
 #!/usr/bin/env bash
 
 # Build
-(cd client && webpack)
-(cd server && bash build.sh)
+(cd client && webpack) || exit 1
+(cd server && bash build.sh) || exit 1
 
 rm -rf out
 rm out.zip
