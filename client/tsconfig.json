@@ -5,6 +5,7 @@
         "noImplicitAny": true,
         "alwaysStrict": true,
         "strictNullChecks": true,
+        "newLine": "LF",
         "module": "commonjs",
         "target": "es5",
         "jsx": "react"
