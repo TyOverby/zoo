@@ -1,13 +1,14 @@
 import * as React from "react";
-import {Queue, Run} from "../viper/state";
+import {LoadedQueueState, RunState} from "../state";
+import {ContainsDispatcher} from "../util";
 
-export class RunView extends React.Component<Run, {}> {
+export class RunView extends React.Component<RunState & ContainsDispatcher, {}> {
     render() {
         return <li> {this.props.id}: {this.props.status}</li>
     }
 }
 
-function queueHealth(runs: Run[]): string {
+function queueHealth(runs: RunState[]): string {
     let recent = runs.filter(run => run.status !== "queued" && run.status !== "running")
                          .slice(0, 10);
     let count_failures = recent.filter(run => run.status === "failed").length;
@@ -23,26 +24,28 @@ function queueHealth(runs: Run[]): string {
     return "ok";
 }
 
-export class QueueView extends React.Component<Queue, {collapsed: boolean}> {
-    constructor(props: Queue) {
+export class QueueView extends React.Component<LoadedQueueState & ContainsDispatcher, {}> {
+    constructor(props: LoadedQueueState & ContainsDispatcher) {
+        props.runs.sort((a, b) => b.id - a.id);
         super(props);
         this.state = {collapsed: false};
     }
 
     render() {
         let path = this.props.path;
-        let name = path[path.length - 1];
-
-        let children = this.props.runs.map(run => <RunView {...run} key={run.id}> </RunView>);
-        if (this.state.collapsed) {
+        let children = this.props.runs.map(run => <RunView { ...run } dispatch={this.props.dispatch} key={run.id}> </RunView>);
+        if (this.props.collapsed) {
             children = [];
         }
 
-        let toggleVisibility = () => this.setState({collapsed: !this.state.collapsed});
+        let toggleVisibility = () => this.props.dispatch({
+            type: "TOGGLE_COLLAPSE_QUEUE",
+            name: this.props.name,
+        });
 
         return (
         <div className={"queue " + queueHealth(this.props.runs)}>
-            <h1 onClick={toggleVisibility}> {name} </h1>
+            <h1 onClick={toggleVisibility}> {this.props.name} </h1>
             <ul> {children} </ul>
         </div>);
     }

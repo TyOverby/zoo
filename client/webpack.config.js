@@ -2,7 +2,7 @@ var CopyWebpackPlugin = require('copy-webpack-plugin');
 const { CheckerPlugin } = require('awesome-typescript-loader')
 
 module.exports = {
-    entry: "./src/viper/index.tsx",
+    entry: "./src/app.ts",
     output: {
         filename: "bundle.js",
         path: __dirname + "/dist"
@@ -29,7 +29,7 @@ module.exports = {
     },
     plugins: [
         new CopyWebpackPlugin([
-            { from: "./src/viper/index.html", to: "viper"},
+            { from: "./src/index.html"},
             { from: "./src/styles/" },
             { from: "./node_modules/react/dist/react.js", to: "deps" },
             { from: "./node_modules/react-dom/dist/react-dom.js", to: "deps" }
