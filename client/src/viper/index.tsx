@@ -58,7 +58,7 @@ appState.scheduleDraw();
 
 for (let config of all_configs) {
     let path = [config.server, ... config.path].join("/");
-    let url = `http://localhost:8083/api/viper/runs/${path}`;
+    let url = `/api/viper/runs/${path}`;
 
     httpGet(url,
         function(error: string) {
