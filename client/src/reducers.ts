@@ -2,7 +2,7 @@ import {ZooState, QueueState} from "./state";
 import {ZooAction} from "./actions";
 import {arrayWithModification} from "./util";
 
-const defaultState: ZooState = {
+export const defaultState: ZooState = {
     view: 'viper',
     queues: [],
     errors: [],

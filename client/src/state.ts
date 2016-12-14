@@ -1,9 +1,7 @@
 import {createStore, Store} from "redux";
 import {zooReducer} from "./reducers";
 
-export const initStore: () => Store<ZooState> =  () => createStore(zooReducer);
-
-export interface ZooState {
+export type ZooState = {
     view: 'viper',
     queues: QueueState[],
     errors: {message: string, details: any}[],
@@ -28,7 +26,7 @@ export type QueueState =  LoadedQueueState |
     error: string,
 };
 
-export interface RunState {
+export type RunState = {
     id: number,
     status: 'succeeded' | 'failed' | 'running' | 'queued',
 }

@@ -12,16 +12,12 @@
     },
     "files": [
         "./src/components/queue.tsx",
-        /*
-        "./src/viper/foreign.ts",
-        "./src/viper/index.tsx",
-        "./src/viper/state.ts",
-        "./src/viper/render.tsx",
-        */
         "./src/actions.ts",
+        "./src/store.ts",
         "./src/reducers.ts",
         "./src/render.tsx",
         "./src/state.ts",
-        "./src/util.ts"
+        "./src/util.ts",
+        "./src/lens.ts"
     ]
 }

@@ -1,11 +1,13 @@
-import render from "./render";
-import {httpGet} from "./util";
 import * as React from "react";
 import * as ReactDOM from "react-dom";
 
-import {initStore} from "./state";
+import {LoadedQueueAction} from "./actions";
+import render from "./render";
+import {zooReducer, defaultState} from "./reducers";
+import {httpGet} from "./util";
+import MyStore from "./store";
 
-let store = initStore();
+let store = new MyStore(zooReducer, defaultState);
 let container = document.getElementById("app");
 let draw = () => ReactDOM.render(render(store.getState(), (a) => store.dispatch(a)), container);
 store.subscribe(draw);
@@ -49,14 +51,14 @@ for(let config of all_configs)  {
 
         function(content: string) {
             let json = JSON.parse(content);
-            store.dispatch({
+            let out: LoadedQueueAction = {
                 type: "LOADED_QUEUE",
                 name: config.name,
                 url: url,
-                path: path,
+                path: config.path,
                 runs: json.runs,
-                collapsed: false,
-            });
+            };
+            store.dispatch(out);
         }
     )
 }
