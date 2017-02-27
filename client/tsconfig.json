@@ -17,7 +17,6 @@
         "./src/reducers.ts",
         "./src/render.tsx",
         "./src/state.ts",
-        "./src/util.ts",
-        "./src/lens.ts"
+        "./src/util.ts"
     ]
 }

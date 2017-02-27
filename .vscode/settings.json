@@ -1,0 +1,14 @@
+{
+    "files.exclude": {
+        "**/node_modules": true,
+        "server/.fake": true,
+        "server/.paket": true,
+        "server/build": true,
+        "server/deploy": true,
+        "server/packages": true,
+        "server/zoo/zoo/build": true,
+        "server/zoo/zoo/bin": true,
+        "server/zoo/zoo/obj": true,
+        "server/paket.lock": true
+    }
+}
