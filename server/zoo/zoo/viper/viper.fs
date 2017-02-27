@@ -32,7 +32,8 @@ let cache: Util.MutexHolder<Map<(string * string[]), (Diagnostics.Stopwatch * Ma
 
 let updateCache domain jobNames n: Async<RunResult[]> =
     let fetchBuildResult path number = async {
-        let! run =  BuildResultContext.AsyncLoad(sprintf "http://%s/%s/%d/api/json?pretty=true" domain path number)
+        let url = sprintf "https://%s/%s/%d/api/json?pretty=true" domain path number
+        let! run = BuildResultContext.AsyncLoad url
         return {
             Id = run.Id;
             Status =
@@ -45,10 +46,11 @@ let updateCache domain jobNames n: Async<RunResult[]> =
 
     async {
         let jobNesting = String.Join("/", jobNames |> Seq.collect (fun x -> ["job"; x]))
-        let! data = RunsContext.AsyncLoad(sprintf "http://%s/%s/api/json?pretty=true" domain jobNesting)
+        let url = sprintf "https://%s/%s/api/json?pretty=true" domain jobNesting
+        let! data = RunsContext.AsyncLoad(url)
         let numbers = data.Builds |> Seq.map (fun b -> b.Number) |> Seq.take n
         let! queue = numbers |> Seq.map (fetchBuildResult jobNesting) |> Async.Parallel
-        let queueMap = queue |> Array.map (fun b -> (b.Id , b)) |> Map.ofArray
+        let queueMap = queue |> Seq.map (fun b -> (b.Id , b)) |> Map.ofSeq
 
         ignore(cache.MapUpdate (fun cache ->
             let key = (domain, Array.ofSeq jobNames)

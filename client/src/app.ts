@@ -20,7 +20,7 @@ draw();
 let all_configs = [
     {
         name: "perf run",
-        server: "dotnet-ci2.cloudapp.net",
+        server: "ci2.dot.net",
         path: ["dotnet_roslyn", "perf", "master", "perf_run"],
     },
     {
