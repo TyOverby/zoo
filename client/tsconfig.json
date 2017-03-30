@@ -17,6 +17,8 @@
         "./src/reducers.ts",
         "./src/render.tsx",
         "./src/state.ts",
-        "./src/util.ts"
+        "./src/util.ts",
+        "./src/config.ts",
+        "./src/update_state.ts"
     ]
 }

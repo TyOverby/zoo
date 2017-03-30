@@ -1,0 +1,202 @@
+{
+  "_class" : "com.cloudbees.hudson.plugins.folder.Folder",
+  "actions" : [
+    {
+
+    },
+    {
+
+    },
+    {
+      "_class" : "com.cloudbees.plugins.credentials.ViewCredentialsAction"
+    }
+  ],
+  "description" : null,
+  "displayName" : "master",
+  "displayNameOrNull" : null,
+  "name" : "master",
+  "url" : "https://ci.dot.net/job/dotnet_roslyn/job/master/",
+  "healthReport" : [
+    {
+      "description" : "Worst health: dotnet_roslyn » master » windows_release_vs-integration_prtest: Build stability: 4 out of the last 5 builds failed.",
+      "iconClassName" : "icon-health-00to19",
+      "iconUrl" : "health-00to19.png",
+      "score" : 20
+    }
+  ],
+  "jobs" : [
+    {
+      "_class" : "com.cloudbees.hudson.plugins.folder.Folder",
+      "name" : "GenPRTest",
+      "url" : "https://ci.dot.net/job/dotnet_roslyn/job/master/job/GenPRTest/"
+    },
+    {
+      "_class" : "hudson.model.FreeStyleProject",
+      "name" : "generator",
+      "url" : "https://ci.dot.net/job/dotnet_roslyn/job/master/job/generator/",
+      "color" : "blue"
+    },
+    {
+      "_class" : "hudson.model.FreeStyleProject",
+      "name" : "help_message",
+      "url" : "https://ci.dot.net/job/dotnet_roslyn/job/master/job/help_message/",
+      "color" : "notbuilt"
+    },
+    {
+      "_class" : "hudson.model.FreeStyleProject",
+      "name" : "linux_debug",
+      "url" : "https://ci.dot.net/job/dotnet_roslyn/job/master/job/linux_debug/",
+      "color" : "blue"
+    },
+    {
+      "_class" : "hudson.model.FreeStyleProject",
+      "name" : "linux_debug_prtest",
+      "url" : "https://ci.dot.net/job/dotnet_roslyn/job/master/job/linux_debug_prtest/",
+      "color" : "blue_anime"
+    },
+    {
+      "_class" : "hudson.model.FreeStyleProject",
+      "name" : "mac_debug",
+      "url" : "https://ci.dot.net/job/dotnet_roslyn/job/master/job/mac_debug/",
+      "color" : "blue"
+    },
+    {
+      "_class" : "hudson.model.FreeStyleProject",
+      "name" : "mac_debug_prtest",
+      "url" : "https://ci.dot.net/job/dotnet_roslyn/job/master/job/mac_debug_prtest/",
+      "color" : "blue"
+    },
+    {
+      "_class" : "hudson.model.FreeStyleProject",
+      "name" : "microbuild",
+      "url" : "https://ci.dot.net/job/dotnet_roslyn/job/master/job/microbuild/",
+      "color" : "blue"
+    },
+    {
+      "_class" : "hudson.model.FreeStyleProject",
+      "name" : "microbuild_prtest",
+      "url" : "https://ci.dot.net/job/dotnet_roslyn/job/master/job/microbuild_prtest/",
+      "color" : "red_anime"
+    },
+    {
+      "_class" : "hudson.model.FreeStyleProject",
+      "name" : "perf_correctness",
+      "url" : "https://ci.dot.net/job/dotnet_roslyn/job/master/job/perf_correctness/",
+      "color" : "blue"
+    },
+    {
+      "_class" : "hudson.model.FreeStyleProject",
+      "name" : "perf_correctness_prtest",
+      "url" : "https://ci.dot.net/job/dotnet_roslyn/job/master/job/perf_correctness_prtest/",
+      "color" : "red_anime"
+    },
+    {
+      "_class" : "hudson.model.FreeStyleProject",
+      "name" : "windows_build_correctness",
+      "url" : "https://ci.dot.net/job/dotnet_roslyn/job/master/job/windows_build_correctness/",
+      "color" : "blue"
+    },
+    {
+      "_class" : "hudson.model.FreeStyleProject",
+      "name" : "windows_build_correctness_prtest",
+      "url" : "https://ci.dot.net/job/dotnet_roslyn/job/master/job/windows_build_correctness_prtest/",
+      "color" : "red_anime"
+    },
+    {
+      "_class" : "hudson.model.FreeStyleProject",
+      "name" : "windows_debug_unit32",
+      "url" : "https://ci.dot.net/job/dotnet_roslyn/job/master/job/windows_debug_unit32/",
+      "color" : "blue"
+    },
+    {
+      "_class" : "hudson.model.FreeStyleProject",
+      "name" : "windows_debug_unit32_prtest",
+      "url" : "https://ci.dot.net/job/dotnet_roslyn/job/master/job/windows_debug_unit32_prtest/",
+      "color" : "red_anime"
+    },
+    {
+      "_class" : "hudson.model.FreeStyleProject",
+      "name" : "windows_debug_unit64",
+      "url" : "https://ci.dot.net/job/dotnet_roslyn/job/master/job/windows_debug_unit64/",
+      "color" : "blue"
+    },
+    {
+      "_class" : "hudson.model.FreeStyleProject",
+      "name" : "windows_debug_unit64_prtest",
+      "url" : "https://ci.dot.net/job/dotnet_roslyn/job/master/job/windows_debug_unit64_prtest/",
+      "color" : "red_anime"
+    },
+    {
+      "_class" : "hudson.model.FreeStyleProject",
+      "name" : "windows_debug_vs-integration",
+      "url" : "https://ci.dot.net/job/dotnet_roslyn/job/master/job/windows_debug_vs-integration/",
+      "color" : "red"
+    },
+    {
+      "_class" : "hudson.model.FreeStyleProject",
+      "name" : "windows_debug_vs-integration_prtest",
+      "url" : "https://ci.dot.net/job/dotnet_roslyn/job/master/job/windows_debug_vs-integration_prtest/",
+      "color" : "red_anime"
+    },
+    {
+      "_class" : "hudson.model.FreeStyleProject",
+      "name" : "windows_determinism",
+      "url" : "https://ci.dot.net/job/dotnet_roslyn/job/master/job/windows_determinism/",
+      "color" : "blue"
+    },
+    {
+      "_class" : "hudson.model.FreeStyleProject",
+      "name" : "windows_determinism_prtest",
+      "url" : "https://ci.dot.net/job/dotnet_roslyn/job/master/job/windows_determinism_prtest/",
+      "color" : "blue_anime"
+    },
+    {
+      "_class" : "hudson.model.FreeStyleProject",
+      "name" : "windows_release_unit32",
+      "url" : "https://ci.dot.net/job/dotnet_roslyn/job/master/job/windows_release_unit32/",
+      "color" : "blue"
+    },
+    {
+      "_class" : "hudson.model.FreeStyleProject",
+      "name" : "windows_release_unit32_prtest",
+      "url" : "https://ci.dot.net/job/dotnet_roslyn/job/master/job/windows_release_unit32_prtest/",
+      "color" : "red_anime"
+    },
+    {
+      "_class" : "hudson.model.FreeStyleProject",
+      "name" : "windows_release_unit64",
+      "url" : "https://ci.dot.net/job/dotnet_roslyn/job/master/job/windows_release_unit64/",
+      "color" : "blue"
+    },
+    {
+      "_class" : "hudson.model.FreeStyleProject",
+      "name" : "windows_release_unit64_prtest",
+      "url" : "https://ci.dot.net/job/dotnet_roslyn/job/master/job/windows_release_unit64_prtest/",
+      "color" : "red_anime"
+    },
+    {
+      "_class" : "hudson.model.FreeStyleProject",
+      "name" : "windows_release_vs-integration",
+      "url" : "https://ci.dot.net/job/dotnet_roslyn/job/master/job/windows_release_vs-integration/",
+      "color" : "blue"
+    },
+    {
+      "_class" : "hudson.model.FreeStyleProject",
+      "name" : "windows_release_vs-integration_prtest",
+      "url" : "https://ci.dot.net/job/dotnet_roslyn/job/master/job/windows_release_vs-integration_prtest/",
+      "color" : "red_anime"
+    }
+  ],
+  "primaryView" : {
+    "_class" : "hudson.model.AllView",
+    "name" : "All",
+    "url" : "https://ci.dot.net/job/dotnet_roslyn/job/master/"
+  },
+  "views" : [
+    {
+      "_class" : "hudson.model.AllView",
+      "name" : "All",
+      "url" : "https://ci.dot.net/job/dotnet_roslyn/job/master/"
+    }
+  ]
+}

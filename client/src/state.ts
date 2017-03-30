@@ -3,8 +3,12 @@ import {zooReducer} from "./reducers";
 
 export type ZooState = {
     view: 'viper',
-    queues: QueueState[],
+    queues: { [queueName:string]: QueueState },
     errors: {message: string, details: any}[],
+    filter: {
+        branch: { [branch: string]: number; },
+        prtest: boolean,
+    }
 }
 
 export type LoadedQueueState = {
@@ -14,19 +18,25 @@ export type LoadedQueueState = {
     path: string[],
     runs: RunState[],
     collapsed: boolean,
+    branch: string,
 }
 
-export type QueueState =  LoadedQueueState |
-{
+export type LoadingQueueState = {
     status: 'loading',
-    name: string
-} | {
+    name: string,
+    branch: string,
+}
+
+export type FailedQueueState = {
     status: 'failed',
     name: string
     error: string,
-};
+    branch: string,
+}
+
+export type QueueState = LoadedQueueState | LoadingQueueState | FailedQueueState;
 
 export type RunState = {
     id: number,
-    status: 'succeeded' | 'failed' | 'running' | 'queued',
+    status: 'succeeded' | 'failed' | 'running' | 'queued' | 'aborted',
 }

@@ -1,15 +1,111 @@
-.ok {
-    background-color: green;
+html, body {
+    background-image: url("/tiny_grid.png");
+    font-family: sans-serif;
+    margin: 0;
+    padding: 0;
 }
 
-.warning {
-    background-color: yellow;
+.ok {
+    background-color: rgb(0, 100, 0);
+    color: white;
+}
+
+.warn {
+    background-color: darkorange;
 }
 
 .error {
     background-color: red;
 }
 
+.nothing {
+    background-color: grey;
+}
+
+.loading {
+    width: 350px;
+    margin: 10px;
+    padding: 10px;
+    border-radius: 5px;
+}
+
 .queue > h1 {
+    font-size: 20px;
+
     user-select: none;
+    cursor: pointer;
+
+    margin: 0;
+    padding: 0;
+}
+
+.queue > ul {
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+}
+
+.queue > ul > li {
+    padding: 3px;
+    margin: 2px;
+    border-radius: 3px;
+}
+
+.queue > ul > li.succeeded {
+    background-color: rgb(0, 150, 0);
+    border: 1px solid green;
+    color: white;
+}
+.queue > ul > li.failed {
+    background-color: rgb(150, 0, 0);
+    color: white;
+}
+.queue > ul > li.queued {
+    background-color: yellow;
+    color: black;
+}
+.queue > ul > li.aborted {
+    background-color: lightgrey;
+    color: black;
+}
+.queue > ul > li.running {
+    background-color: darkblue;
+    color: white;
+}
+
+.queue {
+    width: 350px;
+    margin: 10px;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+#queue-container {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: flex-start;
+    max-height: 100vh;
+    align-items: flex-start;
+    align-content: flex-start;
+}
+
+button.collapse-button:hover {
+    background-color: black;
+    cursor: pointer;
+}
+
+button {
+    height: 40px;
+    background-color: rgb(50,50,50);
+    color: white;
+    font-size: 25px;
+    border: 0;
+    border-radius: 5px;
+    margin: 5px;
+    padding: 5px;
+}
+
+#filters {
+    background-color: white;
+    padding: 10px;
 }

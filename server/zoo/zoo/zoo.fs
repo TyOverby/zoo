@@ -55,6 +55,7 @@ let app =
         GET >=> choose [
             pathScan "/api/viper/runs/%s/%s" (fun (domain, jobNames) -> Viper.getJenkinsWeb domain (splitPath jobNames))
             path "/api/viper/cache" >=> setMimeType "text/plain" >=> Viper.cachePrinter
+            pathScan "/api/viper/joblist/%s/%s" (fun (domain, jobNames) -> Viper.getJobListWeb domain jobNames)
             Files.browse staticFiles
         ]
     ]

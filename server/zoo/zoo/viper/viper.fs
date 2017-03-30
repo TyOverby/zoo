@@ -12,12 +12,19 @@ open FSharp.Data
 
 type RunsContext = JsonProvider<"./viper/json-examples/jenkins/queue.json">
 type BuildResultContext = JsonProvider<"./viper/json-examples/jenkins/run.json", SampleIsList=true>
+type JobListContext = JsonProvider<"./viper/json-examples/jenkins/joblist.json">
 
-type RunStatus = Queued | Running | Failed | Succeeded with
+type RunStatus =
+    | Queued
+    | Running
+    | Aborted
+    | Failed
+    | Succeeded with
     override this.ToString() =
         match this with
           | Queued -> "queued"
           | Running -> "running"
+          | Aborted -> "aborted"
           | Failed -> "failed"
           | Succeeded -> "succeeded"
 
@@ -37,10 +44,12 @@ let updateCache domain jobNames n: Async<RunResult[]> =
         return {
             Id = run.Id;
             Status =
-                match run.Result with
-                    | "SUCCESS" -> Succeeded
-                    | "FAILURE" -> Failed
-                    | _ -> Queued
+                match (run.Result, run.Building) with
+                    | ("SUCCESS", _) -> Succeeded
+                    | ("FAILURE", _) -> Failed
+                    | ("ABORTED", _) -> Aborted
+                    | (_, false) -> Queued
+                    | (_, true) -> Running
         }
     }
 
@@ -48,7 +57,7 @@ let updateCache domain jobNames n: Async<RunResult[]> =
         let jobNesting = String.Join("/", jobNames |> Seq.collect (fun x -> ["job"; x]))
         let url = sprintf "https://%s/%s/api/json?pretty=true" domain jobNesting
         let! data = RunsContext.AsyncLoad(url)
-        let numbers = data.Builds |> Seq.map (fun b -> b.Number) |> Seq.take n
+        let numbers = data.Builds |> Seq.map (fun b -> b.Number) |> Seq.truncate n
         let! queue = numbers |> Seq.map (fetchBuildResult jobNesting) |> Async.Parallel
         let queueMap = queue |> Seq.map (fun b -> (b.Id , b)) |> Map.ofSeq
 
@@ -78,10 +87,10 @@ let getJenkinsWeb domain jobNames: WebPart =
         // to 20
         let n = defaultArg n 10 |> min 20
         let! res = match Map.tryFind (domain, jobNames) cache.Snapshot with
-                   | Some((stopwatch, results)) when stopwatch.Elapsed < TimeSpan.FromMinutes 2.0 ->
+                   | Some((stopwatch, results)) when stopwatch.Elapsed < TimeSpan.FromMinutes 30.0 ->
                         results |> Map.toArray |> Array.map snd |> async.Return
                    | _ -> updateCache domain jobNames n
-        let res = intoJson res
+        let res = res |> Seq.truncate n |> intoJson
         return! OK res x
     }
 
@@ -94,3 +103,21 @@ let cachePrinter =
             for (KeyValue(_, result)) in v do
                 out <- out + sprintf "\t%s\n" (result.ToString())
         OK out x
+
+let getJobList domain topLevel =
+    async {
+        let url = (sprintf "https://%s/job/%s/api/json?pretty=true" domain topLevel)
+        let! data = JobListContext.AsyncLoad url
+        return data.Jobs |> Seq.map (fun j -> j.Url)
+                         |> Seq.map (fun j -> j.Split('/'))
+                         |> Seq.map (Seq.where (String.IsNullOrEmpty >> not))
+                         |> Seq.map (Seq.filter (String.IsNullOrWhiteSpace >> not))
+                         |> Seq.map Seq.last
+                         |> Array.ofSeq
+    }
+
+let getJobListWeb domain topLevel = fun (x: HttpContext) ->  async {
+        let wrapInQuotes s = "\"" + s + "\""
+        let! list = getJobList domain topLevel
+        return! OK ("[" + String.Join(", ", Seq.map wrapInQuotes list) + "]") x
+    }
